@@ -5,4 +5,4 @@ def d_extract(to_extract: "list or tuple"):
     for i in to_extract:
         done[i] = done.get(i, 0) + 1
     
-    return [ value for value, count in done.items() if count > 1 ]
+    return [ value for value in done if done[value] > 1 ]
